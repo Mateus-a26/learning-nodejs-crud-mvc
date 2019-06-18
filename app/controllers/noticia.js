@@ -42,7 +42,7 @@ module.exports.getById = function(application, req, res){
 	var noticiaDAO = application.app.models.noticia.noticiaDao;
 
 	
-	noticiaDAO.findById(connection, req.body.noticia_id, 
+	noticiaDAO.findById(connection, req.body.noticia_id,
 		/* Esta é a nossa função de callback */
 		function(error, result){
 			header = {

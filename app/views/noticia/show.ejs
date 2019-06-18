@@ -40,17 +40,16 @@
   */
   $(document).ready(function(){
 
-    var data = {'noticia_id' : <%= noticia_id 
-    %>};
+    var data = {'noticia_id' : <%= noticia_id %>};
 
 
     $.ajax({
       type : 'post',
       url : '/noticia/getById',
-      data : data;
-
+      data : data
     }).done(function(json){
       console.log(json);
+      $("#titulo").html(json.data[0].titulo);
     })
 
 
