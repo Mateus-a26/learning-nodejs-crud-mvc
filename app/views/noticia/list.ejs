@@ -43,10 +43,10 @@
   $.ajax({
     type : 'post',
     url : '/noticia/list'
-
   }).done(function(json){
     console.log(json);
-    makeTableHead('table_noticia', json.header, json.operations)
+    makeTableHead('table_noticia', json.header, json.operations);
+    makeTableBody('table_noticia', json.data, json.operations);
   })
 
 
